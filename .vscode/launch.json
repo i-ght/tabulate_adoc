@@ -1,0 +1,47 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'tabulate'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=tabulate",
+                    "--package=tabulate"
+                ],
+                "filter": {
+                    "name": "tabulate",
+                    "kind": "bin"
+                }
+            },
+            "args": [
+                "/home/coyote/Code/wise-words.cybergenic.de/drama_gifted_child.adoc"
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'tabulate'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=tabulate",
+                    "--package=tabulate"
+                ],
+                "filter": {
+                    "name": "tabulate",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
